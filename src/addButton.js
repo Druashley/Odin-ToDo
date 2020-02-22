@@ -11,7 +11,9 @@ function setNewTask () {
 }
 
 const setAddButton = () => {
-    addButton.addEventListener("click", setNewTask)
+    addButton.addEventListener("click", function(){
+        container.appendChild(testTask.testMethod())
+    })
 }
 
 export {setAddButton}

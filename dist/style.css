@@ -2,3 +2,19 @@ body  {
     background-color: grey;
 }
 
+.container {
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+}
+.banner{
+    background-color: green;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+}
+
+.task{
+    border: 1px black solid;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+}

@@ -17,11 +17,8 @@ function setNewTask () {
     taskPriority.textContent = testTask.priority;
     taskNotes.textContent = testTask.notes;
 
-
-    // newTask.innerHTML = `${testTask.title} due date is ${testTask.dueDate} and has the following notes: ${testTask.notes}.`
     newTask.classList.add("task");
-
-
+    
     newTask.appendChild(taskTitle);
     newTask.appendChild(taskDescription);
     newTask.appendChild(taskDueDate);
@@ -29,7 +26,6 @@ function setNewTask () {
     newTask.appendChild(taskNotes);
 
     container.appendChild(newTask) 
-//    container.appendChild(testTask.testMethod())
 }
 
 const setAddButton = () => {

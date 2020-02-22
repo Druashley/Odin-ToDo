@@ -2,7 +2,7 @@
 
 // things we will need
 // title, description, dueDate, priority, notes, checklist
-
+import { format, compareAsc, set } from 'date-fns'
 
 const todoTask = ({ title, description, dueDate, priority, notes }) => ({
     title,
@@ -15,8 +15,8 @@ const todoTask = ({ title, description, dueDate, priority, notes }) => ({
     },
 });
 
+let testDate = format(new Date(2022, 1, 11), 'MM/dd/yyyy')
 
+const testTask = todoTask({ title: 'Test', description: 'Test2', dueDate: testDate, priority: 'high', notes: 'this is a note' })
 
-const testTask = todoTask({ title: 'Test', description: 'Test2', dueDate: '1/2/2020', priority: 'high', notes: 'this is a note' })
-
-export { testTask }
+export { testTask, todoTask }

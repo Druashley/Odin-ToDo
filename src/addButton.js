@@ -32,8 +32,6 @@ function setNewTask (plusTask) {
     container.appendChild(newTask) 
 }
 
-const setAddButton = () => {
-    addButton.addEventListener("click", setNewTask)
-}
 
-export {setAddButton, setNewTask}
+
+export { setNewTask}

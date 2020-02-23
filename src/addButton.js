@@ -3,22 +3,26 @@ import { testTask } from "./todoObject.js"
 
 // this is a test add button
 
-function setNewTask () {
+function setNewTask (plusTask) {
     const newTask = document.createElement('div');
     const taskTitle = document.createElement('div');
     const taskDescription = document.createElement('div');
     const taskDueDate = document.createElement('div');
     const taskPriority = document.createElement('div');
     const taskNotes = document.createElement('div')
-   
-    taskTitle.textContent = testTask.title;
-    taskDescription.textContent = testTask.description;
-    taskDueDate.textContent = testTask.dueDate;
-    taskPriority.textContent = testTask.priority;
-    taskNotes.textContent = testTask.notes;
+    const checkmark = document.createElement('img');
+
+    checkmark.src = "./pictures/checkmark.png";
+    taskTitle.textContent = plusTask.title;
+    taskDescription.textContent = plusTask.description;
+    taskDueDate.textContent = plusTask.dueDate;
+    taskPriority.textContent = plusTask.priority;
+    taskNotes.textContent = plusTask.notes;
 
     newTask.classList.add("task");
+    checkmark.classList.add("icon");
     
+    newTask.appendChild(checkmark);
     newTask.appendChild(taskTitle);
     newTask.appendChild(taskDescription);
     newTask.appendChild(taskDueDate);
@@ -32,4 +36,4 @@ const setAddButton = () => {
     addButton.addEventListener("click", setNewTask)
 }
 
-export {setAddButton}
+export {setAddButton, setNewTask}

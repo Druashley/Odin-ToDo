@@ -19,11 +19,11 @@ createButton.addEventListener("click", function(){
     const duedateForm = document.createElement("input");
     const priorityForm = document.createElement("select");
     const noteForm = document.createElement("input");
-    const plusButton = document.createElement("div");
-    const minusButton = document.createElement("div");
+    const plusButton = document.createElement("button");
+    const minusButton = document.createElement("button");
 
-    plusButton.textContent = "+";
-    minusButton.textContent = "-";
+    plusButton.textContent = "Add Task";
+    minusButton.textContent = "Quit";
 
     titleForm.setAttribute("placeholder", "Title?");
     descriptionForm.setAttribute("placeholder", "Description?");

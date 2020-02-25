@@ -10,9 +10,9 @@ function setNewTask (plusTask) {
     const taskDueDate = document.createElement('div');
     const taskPriority = document.createElement('div');
     const taskNotes = document.createElement('div')
-    const checkmark = document.createElement('img');
+    const checkmark = document.createElement('div');
 
-    checkmark.src = "./pictures/checkmark.png";
+    checkmark.textContent = "○";
     taskTitle.textContent = plusTask.title;
     taskDescription.textContent = plusTask.description;
     taskDueDate.textContent = plusTask.dueDate;
@@ -38,10 +38,11 @@ function setNewTask (plusTask) {
 function markTaskDone (){
     if (!this.parentElement.style.textDecoration){
         this.parentElement.style.textDecoration="line-through"
+        this.textContent = '●';
     } else {
         this.parentNode.remove()
     }  
 }
 
 
-export { setNewTask}
+export { setNewTask }

@@ -22,3 +22,9 @@ body  {
 .icon {
     width: 25px;
 }
+
+.forum-container{
+    border: black 1px solid;
+    padding: 15px;
+    caret-color: yellow;
+}

@@ -21,6 +21,9 @@ function setNewTask (plusTask) {
 
     newTask.classList.add("task");
     checkmark.classList.add("icon");
+
+    checkmark.addEventListener("click", markTaskDone)
+    
     
     newTask.appendChild(checkmark);
     newTask.appendChild(taskTitle);
@@ -32,6 +35,13 @@ function setNewTask (plusTask) {
     container.appendChild(newTask) 
 }
 
+function markTaskDone (){
+    if (!this.parentElement.style.textDecoration){
+        this.parentElement.style.textDecoration="line-through"
+    } else {
+        this.parentNode.remove()
+    }  
+}
 
 
 export { setNewTask}

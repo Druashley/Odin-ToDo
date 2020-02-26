@@ -8,7 +8,7 @@ import { setNewTask } from "./addButton.js"
 
 
 createButton.addEventListener("click", function(){
-    console.log(forumContainer.childElementCount)
+
 
     if (!forumContainer.childElementCount > 0){
         

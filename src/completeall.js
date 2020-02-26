@@ -6,10 +6,22 @@ completeButton.addEventListener("click", completeAllFunction);
 
 
 function completeAllFunction() {
-    this.textContent = "●"
-    while (container.childElementCount > 0) {
-        container.removeChild(container.lastChild)
-    }
+    if (this.textContent == "○"){
+        this.textContent = "●";   
+        for (let i = 0; i < container.childElementCount; i++){
+            container.children[i].firstElementChild.textContent = "●";
+            container.children[i].style.textDecoration = "line-through";
+        }    
+    } else {
+        this.textContent = "○";   
+        for (let i = 0; i < container.childElementCount; i++){
+            container.children[i].firstElementChild.textContent = "○";
+            container.children[i].style.textDecoration = "none";
+        }
+} 
+    //while (container.childElementCount > 0) {
+     //   container.removeChild(container.lastChild)
+   // }
 }
 
 const completeAllButton = () => {completeButton}

@@ -36,10 +36,13 @@ function setNewTask (plusTask) {
 }
 
 function markTaskDone (){
-    if (!this.parentElement.style.textDecoration){
+    //!this.parentElement.style.textDecoration || this.parentElement.style.textContent == 'none'
+    if (this.textContent == '○'){
         this.parentElement.style.textDecoration="line-through"
         this.textContent = '●';
+        console.log(this.parentElement.style.textDecoration)
     } else {
+        console.log(this.parentElement.style.textDecoration)
         this.parentNode.remove()
     }  
 }

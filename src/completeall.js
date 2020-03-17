@@ -11,6 +11,7 @@ function completeAllFunction() {
         for (let i = 0; i < container.childElementCount; i++){
             container.children[i].firstElementChild.textContent = "●";
             container.children[i].style.textDecoration = "line-through";
+            //container.children[i].classList.add(".task-complete")
         }    
     } else {
         this.textContent = "○";   
